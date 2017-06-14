@@ -3,6 +3,17 @@
 
 from numpy import around
 
+class card:
+    """Card recto: recto of the card,verso: verso of the card,n: number of sights since the begining or restart,EF: E-factor,I: interval between last sigth and next sight, date: date of next sigth"""
+    def __init__(self,recto,verso,n,EF,I,date):
+        self.recto=recto
+        self.verso=verso
+        self.n = n
+        self.EF= EF
+        self.date = date
+        self.I= I
+
+
 def e_factor(EF=None,q=None):
     if EF==None and q==None:
         EF=2.5
